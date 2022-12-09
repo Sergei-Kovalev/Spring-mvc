@@ -7,7 +7,12 @@
 <br>
 <br>
 
-<h2>Your name: ${nameAttribute} </h2>
+<h2>Your name: ${employee.name} </h2>
+<br>
+<h2>Your surname: ${employee.surName} </h2>
+<br>
+<h2>Your salary: ${employee.salary} </h2>
+<br>
 
 </body>
 
