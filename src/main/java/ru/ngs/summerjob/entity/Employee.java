@@ -1,13 +1,22 @@
 package ru.ngs.summerjob.entity;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Employee {
     private String name;
     private String surName;
     private int salary;
     private String department;
+    private Map<String, String> departments;
+
 
     public Employee() {
+        departments = new HashMap<>();
+        departments.put("IT", "Information technology");
+        departments.put("HR", "Human resources");
+        departments.put("Sales", "Sales");
     }
 
     public Employee(String name, String surName, int salary, String department) {
@@ -15,6 +24,15 @@ public class Employee {
         this.surName = surName;
         this.salary = salary;
         this.department = department;
+    }
+
+
+    public Map<String, String> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(Map<String, String> departments) {
+        this.departments = departments;
     }
 
     public String getName() {
