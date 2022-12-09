@@ -21,8 +21,11 @@
     </form:select>
     <br><br>
     <h2>Which car do you want?</h2>
-    <br>
+    <br><br>
     <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
+    <br><br>
+    <h2>Foreign language(s)?</h2>
+    <form:checkboxes path="languages" items="${employee.languageList}"/>
 
     <br><br>
 <input type = "submit" value = "OK">
