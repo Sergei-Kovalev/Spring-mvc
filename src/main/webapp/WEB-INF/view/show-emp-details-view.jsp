@@ -15,6 +15,8 @@
 <br>
 <h2>Your department: ${employee.department} </h2>
 <br>
+<h2>Your car is: ${employee.carBrand} </h2>
+<br>
 
 </body>
 
