@@ -1,6 +1,8 @@
 package ru.ngs.summerjob;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -16,8 +18,21 @@ public class MyController {
         return "ask-emp-details-view";
     }
 
+//    @RequestMapping("/showDetails")
+//    public String showEmployeeDetails() {
+//        return "show-emp-details-view";
+//    }
+
     @RequestMapping("/showDetails")
-    public String showEmployeeDetails() {
+    public String showEmployeeDetails(HttpServletRequest request, Model model) {
+
+        String empName = request.getParameter("employeeName");
+
+        empName = "Mr. " + empName;
+        model.addAttribute("nameAttribute", empName);
+
+        model.addAttribute("description", " - java developer");
+
         return "show-emp-details-view";
     }
 }
