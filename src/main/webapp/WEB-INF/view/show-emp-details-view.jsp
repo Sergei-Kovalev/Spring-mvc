@@ -31,6 +31,8 @@
 <br>
 <h2>Your phone number is: ${employee.phoneNumber}</h2>
 <br>
+<h2>Your email is: ${employee.email}</h2>
+<br>
 
 </body>
 

@@ -2,6 +2,7 @@ package ru.ngs.summerjob.entity;
 
 
 import jakarta.validation.constraints.*;
+import ru.ngs.summerjob.validation.CheckEmail;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,6 +22,9 @@ public class Employee {
     private Map<String, String> carBrands;
     private String[] languages;
     private Map<String, String> languageList;
+
+    @CheckEmail(value = "ngs.ru", message = "e-mail must ends with ngs.ru")
+    private String email;
 
     @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "Please use pattern XXX-XX-XX")
     private String phoneNumber;
@@ -128,6 +132,14 @@ public class Employee {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
