@@ -28,8 +28,8 @@
     </c:forEach>
 
 </ul>
-
-
+<br>
+<h2>Your phone number is: ${employee.phoneNumber}</h2>
 <br>
 
 </body>

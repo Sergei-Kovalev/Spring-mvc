@@ -10,13 +10,14 @@
 
 <form:form action="showDetails" modelAttribute = "employee">
 
-    Name <form:input path="name"/>
+    Name <form:input path="name" placeholder="min 2 character"/>
     <form:errors path="name"/>
     <br><br>
-    Surname <form:input path="surName"/>
+    Surname <form:input path="surName" placeholder="not empty"/>
     <form:errors path="surName"/>
     <br><br>
     Salary <form:input path="salary"/>
+    <form:errors path="salary"/>
     <br><br>
     Department <form:select path="department">
     <form:options items="${employee.departments}"/>
@@ -28,7 +29,9 @@
     <br><br>
     <h2>Foreign language(s)?</h2>
     <form:checkboxes path="languages" items="${employee.languageList}"/>
-
+    <br><br>
+    Phone Number <form:input path="phoneNumber" placeholder="XXX-XX-XX"/>
+    <form:errors path="phoneNumber"/>
     <br><br>
 <input type = "submit" value = "OK">
 
