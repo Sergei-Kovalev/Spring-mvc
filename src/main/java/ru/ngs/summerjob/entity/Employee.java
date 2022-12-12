@@ -1,11 +1,18 @@
 package ru.ngs.summerjob.entity;
 
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
+    @Size(min = 2, message = "Name must contain at least 2 characters")
     private String name;
+//    @NotEmpty(message = "Surname is required field")
+    @NotBlank(message = "Surname is required field")
     private String surName;
     private int salary;
     private String department;
